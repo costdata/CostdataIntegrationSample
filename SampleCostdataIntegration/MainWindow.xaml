@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:SampleCostdataIntegration"
         mc:Ignorable="d"
         Title="costdata Integration Sample" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <Button Name="StartExcel" Margin="5" HorizontalAlignment="Left" Click="StartExcel_Click">
+            <TextBlock Margin="5" Text="Start Excel" />
+        </Button>
+        <TextBox Name="excelText" Margin="5" MinWidth="300" MinHeight="20" IsEnabled="False" Text="{Binding Selection, Mode=OneWay}" />
+    </StackPanel>
 </Window>

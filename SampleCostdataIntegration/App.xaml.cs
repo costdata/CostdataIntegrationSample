@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
-
+﻿// <copyright file="App.xaml.cs" company="costdata GmbH">
+//     (C) costcata GmbH 2018
+// </copyright>
 namespace SampleCostdataIntegration
 {
+    #region usings
+
+    using System.Windows;
+
+    #endregion
+
     /// <summary>
-    /// Interaktionslogik für "App.xaml"
+    /// class app
     /// </summary>
     public partial class App : Application
     {

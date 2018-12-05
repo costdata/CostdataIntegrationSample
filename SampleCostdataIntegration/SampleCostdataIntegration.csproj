@@ -35,6 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="costdata.integration, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\costdata.integration.1.0.2\lib\netstandard2.0\costdata.integration.dll</HintPath>
+    </Reference>
+    <Reference Include="Randermann.Common, Version=1.0.39.0, Culture=neutral, PublicKeyToken=f48d02d4c00ab5f4, processorArchitecture=MSIL">
+      <HintPath>packages\Randermann.Common.1.0.39\lib\netstandard2.0\Randermann.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Randermann.Interfaces, Version=1.0.14.0, Culture=neutral, PublicKeyToken=f48d02d4c00ab5f4, processorArchitecture=MSIL">
+      <HintPath>packages\Randermann.Interfaces.1.0.14\lib\netstandard2.0\Randermann.Interfaces.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -86,6 +95,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +103,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

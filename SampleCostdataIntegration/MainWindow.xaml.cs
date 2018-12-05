@@ -1,28 +1,61 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
+﻿// <copyright file="MainWindow.xaml.cs" company="costdata GmbH">
+//     (C) costcata GmbH 2018
+// </copyright>
 namespace SampleCostdataIntegration
 {
+    #region usings
+
+    using System.Windows;
+
+    using Costdata.Integration;
+
+    #endregion
+
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// class main window
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region fields
+
+        /// <summary>
+        /// integration test class
+        /// </summary>
+        private Test integrationTest = new Test();
+
+        /// <summary>
+        /// excel test
+        /// </summary>
+        private TestExcel excel = null;
+
+        #endregion
+
+        #region constrruction
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow" /> class.
+        /// </summary>
         public MainWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
+
+        #endregion
+
+        #region handle events
+
+        /// <summary>
+        /// Handle click event of button start excel
+        /// </summary>
+        /// <param name="sender">sender of event</param>
+        /// <param name="e">event parameter</param>
+        private void StartExcel_Click(object sender, RoutedEventArgs e)
+        {
+            this.excel = this.integrationTest.Excel;
+            this.excelText.DataContext = this.excel;
+            this.excel.Start();
+        }
+
+        #endregion
     }
 }
