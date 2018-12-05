@@ -1,2 +1,2 @@
 # CostdataIntegrationSample
-Sample cod for costdata integration
+Sample code for costdata integration
