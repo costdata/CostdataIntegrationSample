@@ -5,11 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SampleCostdataIntegration"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="costdata Integration Sample" Height="450" Width="800">
     <StackPanel>
-        <Button Name="StartExcel" Margin="5" HorizontalAlignment="Left" Click="StartExcel_Click">
-            <TextBlock Margin="5" Text="Start Excel" />
-        </Button>
-        <TextBox Name="excelText" Margin="5" MinWidth="300" MinHeight="20" IsEnabled="False" Text="{Binding Selection, Mode=OneWay}" />
+        <StackPanel Name="start" Orientation="Horizontal">
+            <Button Name="startCostdata" Margin="5" HorizontalAlignment="Left" Visibility="Collapsed" Click="StartCostdata_Click">
+                <TextBlock Margin="5" Text="Start costdata" />
+            </Button>
+            <TextBlock Name="labelUser" Text="User" Margin="5" VerticalAlignment="Center" Visibility="Collapsed" />
+            <TextBox Name="user" Margin="5" VerticalAlignment="Center" Visibility="Collapsed" MinWidth="100" MinHeight="20" />
+            <TextBlock Name="labelPassword" Text="Password" Margin="5" VerticalAlignment="Center" Visibility="Collapsed" />
+            <PasswordBox Name="password" Margin="5" VerticalAlignment="Center" Visibility="Collapsed" MinWidth="100" MinHeight="20" />
+            <Button Name="installCostdata" Margin="5" HorizontalAlignment="Left" Visibility="Collapsed" Click="InstallCostdata_Click">
+                <TextBlock Margin="5" Text="Install costdata" />
+            </Button>
+        </StackPanel>
+        <StackPanel Name="info" Orientation="Horizontal" Visibility="Collapsed">
+            <TextBlock Name="remoteVersion" Margin="5" VerticalAlignment="Center" />
+            <Button Name="checkLicenze" Margin="5" HorizontalAlignment="Left" Visibility="Collapsed" Click="CheckLicense_Click">
+                <TextBlock Margin="5" Text="Check lizense" />
+            </Button>
+        </StackPanel>
+        <StackPanel Name="buttons" Orientation="Horizontal" Visibility="Collapsed">
+            <TextBlock Name="version" Margin="5" />
+            <Button Name="importWage" Margin="5" HorizontalAlignment="Left" Click="ImportWage_Click">
+                <TextBlock Margin="5" Text="Import Wage" />
+            </Button>
+            <Button Name="importSalary" Margin="5" HorizontalAlignment="Left" Click="ImportSalary_Click">
+                <TextBlock Margin="5" Text="Import Salary" />
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Name="import" Margin="5" VerticalAlignment="Center" />
+            <TextBox Name="importText" Margin="5" VerticalAlignment="Center" HorizontalContentAlignment="Right" MinWidth="300" MinHeight="20" IsEnabled="False" />
+            <TextBlock Name="postImport" Margin="5" VerticalAlignment="Center" />
+        </StackPanel>
     </StackPanel>
 </Window>
