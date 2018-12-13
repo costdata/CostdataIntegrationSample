@@ -36,8 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="costdata.integration, Version=1.1.1.0, Culture=neutral, PublicKeyToken=62fda743c948c03d, processorArchitecture=MSIL">
-      <HintPath>packages\costdata.integration.1.1.1\lib\netstandard2.0\costdata.integration.dll</HintPath>
+    <Reference Include="costdata.integration, Version=1.1.2.0, Culture=neutral, PublicKeyToken=62fda743c948c03d, processorArchitecture=MSIL">
+      <HintPath>packages\costdata.integration.1.1.2\lib\netstandard2.0\costdata.integration.dll</HintPath>
     </Reference>
     <Reference Include="Randermann.Common, Version=1.0.39.0, Culture=neutral, PublicKeyToken=f48d02d4c00ab5f4, processorArchitecture=MSIL">
       <HintPath>packages\Randermann.Common.1.0.39\lib\netstandard2.0\Randermann.Common.dll</HintPath>
